@@ -1,1 +1,7 @@
-<Solution />
+<Solution>
+  <Folder Name="/Solution_Herency/">
+    <File Path="Circle.cs" />
+    <File Path="GeometricFigure.cs" />
+    <File Path="Program.cs" />
+  </Folder>
+</Solution>
