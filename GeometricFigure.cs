@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Globalization;
 
 namespace GeometricFigures.Backend;
 
@@ -7,7 +7,7 @@ public abstract class GeometricFigure
     protected GeometricFigure(string name)
     {
         Name = string.IsNullOrWhiteSpace(name)
-            ? throw new ArgumentException("Name cannot be null or whitespace.", nameof(name))
+            ? throw new ArgumentException("El nombre es obligatorio.", nameof(name))
             : name;
     }
 
@@ -25,5 +25,5 @@ public abstract class GeometricFigure
     public static double ValidatePositive(double value, string parameterName) =>
         value > 0
             ? value
-            : throw new ArgumentException("Value must be a positive number.", parameterName);
+            : throw new ArgumentException(parameterName);
 }
